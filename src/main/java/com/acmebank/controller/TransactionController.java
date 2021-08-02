@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(value = "/bankTransfer")
+@RequestMapping(value = "/transaction")
 public class TransactionController {
 
     @Autowired
@@ -19,7 +19,7 @@ public class TransactionController {
 
     Logger log = LoggerFactory.getLogger ( TransactionController.class );
 
-    @PostMapping(value = "/{accountNumber}")
+    @PostMapping(value = "/banktransfer/{accountNumber}")
     public ResponseEntity<Mono<AccountDetails>> accountTransferTX(@PathVariable("accountNumber") Long accountNumber, @RequestBody BankTransfer bankTransfer) {
         log.info ( "TransactionController.accountTransferTX request initiated." );
         if(accountNumber != null) {

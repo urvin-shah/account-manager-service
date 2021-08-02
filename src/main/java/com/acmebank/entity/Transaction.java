@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -21,6 +22,7 @@ public class Transaction {
     private Long accountNumber;
     private String transactionType;
     private Double transactionAmount;
+    private LocalDateTime transactionTime;
     private Double balance;
 
     Transaction(){}

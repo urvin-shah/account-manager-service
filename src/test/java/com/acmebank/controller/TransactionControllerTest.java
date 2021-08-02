@@ -42,7 +42,7 @@ public class TransactionControllerTest {
         doReturn( Mono.just ( accountDetails )).when(accountTransactionService).bankTransferTransaction ( bankTransfer );
 
         webTestClient.post ()
-                .uri ( "/bankTransfer/88888888" )
+                .uri ( "/transaction/banktransfer/88888888" )
                 .contentType ( MediaType.APPLICATION_JSON )
                 .accept ( MediaType.APPLICATION_JSON )
                 .body ( Mono.just(bankTransfer),BankTransfer.class )

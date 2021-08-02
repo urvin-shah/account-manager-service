@@ -9,5 +9,6 @@ CREATE TABLE TRANSACTION (
   account_number INT NOT NULL,
   transaction_type VARCHAR(10) NOT NULL,
   transaction_amount DOUBLE NOT NULL,
+  transaction_time TIMESTAMP NOT NULL,
   balance DOUBLE NOT NULL
 );
