@@ -72,7 +72,7 @@ Response :
 Request Body :
 {
     "toAccountNumber" : 12345678,
-    "transferAmount" : 10000.0
+    "transferAmount" : 40000.0
 }
 
 Response:
